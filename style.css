@@ -1,0 +1,136 @@
+* { 
+  box-sizing: border-box; 
+}
+
+body { 
+  box-sizing: border-box; 
+}
+
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-dancing { font-family: 'Dancing Script', cursive; }
+
+/* Floating hearts background */
+.heart-bg {
+  position: fixed;
+  font-size: 20px;
+  animation: floatUp 6s ease-in infinite;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100%) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100%) rotate(360deg); opacity: 0; }
+}
+
+/* Flower animation styles */
+.flower {
+  position: absolute;
+  font-size: 40px;
+  animation: flowerBurst 3s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes flowerBurst {
+  0% { 
+    transform: scale(0) rotate(0deg); 
+    opacity: 0; 
+  }
+  20% { 
+    opacity: 1; 
+  }
+  100% { 
+    transform: scale(1.2) rotate(360deg) translateY(-100px); 
+    opacity: 0; 
+  }
+}
+
+/* Petal falling animation */
+.petal {
+  position: absolute;
+  font-size: 24px;
+  animation: petalFall 4s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes petalFall {
+  0% { 
+    transform: translateY(-50px) rotate(0deg) scale(0); 
+    opacity: 0; 
+  }
+  20% { 
+    opacity: 1;
+    transform: translateY(0) rotate(90deg) scale(1);
+  }
+  100% { 
+    transform: translateY(300px) rotate(720deg) scale(0.5); 
+    opacity: 0; 
+  }
+}
+
+/* Button pulse */
+.pulse-btn {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Sparkle effect */
+.sparkle {
+  position: absolute;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Photo frame styles */
+.photo-frame {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(219, 112, 147, 0.3);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.photo-frame:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Letter paper effect */
+.letter-paper {
+  background: linear-gradient(to bottom, #fffbf0 0%, #fff8e7 100%);
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.05),
+    0 2px 6px rgba(0,0,0,0.1),
+    0 10px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  top: 1;
+  left: 40px;
+  right: 40px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #e8d5d5 31px,
+    #e8d5d5 32px
+  );
+  pointer-events: none;
+}

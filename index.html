@@ -1,11 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-full">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For my Ati</title>
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Hello my girl</h1>
+<body class="h-full overflow-auto">
+  
+  <div id="landing-page" class="min-h-full w-full flex flex-col items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #1a0a0a 0%, #2d1515 50%, #1a0a0a 100%);">
+    
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none overflow-hidden"></div>
+    
+    <div class="relative z-10 text-center px-6 py-12">
+      <div class="text-5xl mb-6 animate-bounce">💕</div>
+      
+      <h1 id="main-title" class="font-dancing text-5xl md:text-7xl mb-4" style="color: #ff6b9d; text-shadow: 0 0 30px rgba(255, 107, 157, 0.5);">Hello, my baby!</h1>
+      <p class="font-playfair text-xl md:text-2xl mb-12" style="color: #ffb6c1;">I have something special for you, hehe</p>
+      
+      <button id="surprise-btn" class="pulse-btn relative font-playfair text-xl md:text-2xl px-10 py-5 rounded-full transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%); color: white; box-shadow: 0 10px 40px rgba(255, 107, 157, 0.4);">
+        <span id="button-text">Open this 💕</span>
+        <span class="sparkle text-2xl" style="top: -10px; left: 10px; animation-delay: 0s;">✨</span>
+        <span class="sparkle text-xl" style="top: 5px; right: -5px; animation-delay: 0.5s;">💫</span>
+        <span class="sparkle text-2xl" style="bottom: -5px; left: 30%; animation-delay: 1s;">✨</span>
+      </button>
+      
+      <div class="mt-12 text-3xl">
+        <span style="animation: pulse 2s ease-in-out infinite;">🌹</span>
+        <span style="animation: pulse 2s ease-in-out infinite 0.3s;">💐</span>
+        <span style="animation: pulse 2s ease-in-out infinite 0.6s;">🌸</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="flower-popup" class="fixed inset-0 z-50 hidden items-center justify-center" style="background: radial-gradient(ellipse at center, rgba(255, 182, 193, 0.95) 0%, rgba(255, 105, 180, 0.95) 100%);">
+    <div id="flower-container" class="absolute inset-0 overflow-hidden"></div>
+    <div id="popup-content" class="relative z-10 text-center opacity-0 transition-opacity duration-1000">
+      <div class="flex justify-center mb-6">
+        <img src="images/flower.png" alt="flowers" class="w-40 md:w-48 drop-shadow-lg">
+      </div>
+      <h2 class="font-dancing text-5xl md:text-7xl mb-8" style="color: #8b0a50; text-shadow: 2px 2px 4px rgba(255,255,255,0.5);">Flowers for you, my baby</h2>
+      <p class="font-playfair text-xl md:text-2xl mb-10" style="color: #c71585;">Every flower represents my love for you 🌹</p>
+      <button id="more-surprises-btn" class="font-playfair text-xl px-8 py-4 rounded-full transition-all duration-300 hover:scale-105" style="background: linear-gradient(135deg, #8b0a50 0%, #c71585 100%); color: white; box-shadow: 0 8px 30px rgba(139, 10, 80, 0.4);"> More Surprises 💌 </button>
+    </div>
+  </div>
+
+  <div id="letter-page" class="min-h-full w-full hidden" style="background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 50%, #ffd6e7 100%);">
+    <div class="w-full max-w-5xl mx-auto px-4 py-8 md:py-12">
+      <div class="text-center mb-10">
+        <div class="text-5xl mb-4">💕</div>
+        <h1 class="font-dancing text-4xl md:text-6xl" style="color: #c71585;">Our Cutie Patotie Love Story</h1>
+      </div>
+      
+      <div class="mb-12">
+        <h2 class="font-playfair text-2xl md:text-3xl text-center mb-8" style="color: #8b0a50;">📸 Memories Together</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+       <div class="photo-frame">
+            <div class="aspect-square rounded-lg flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);">   
+                <img src="images/1.jpg" alt="Our Memory" class="absolute inset-0 w-full h-full object-cover z-10"> 
+            </div>
+            <p class="font-dancing text-center mt-3 text-lg" style="color: #8b0a50;">The Best Pic 💑</p>
+        </div>
+
+        <div class="photo-frame">
+            <div class="aspect-square rounded-lg flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #dda0dd 0%, #da70d6 100%);">
+                <img src="images/2.jpg" alt="Adventures Together" class="absolute inset-0 w-full h-full object-cover z-10 hover:opacity-90 transition-opacity">
+            </div>
+            <p class="font-dancing text-center mt-3 text-lg" style="color: #8b0a50;">Our 5th Anniversary 💐</p>
+        </div>
+
+        <div class="photo-frame">
+            <div class="aspect-square rounded-lg flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #f0b6d3 0%, #e88fb4 100%);">
+                <img src="images/3.jpeg" alt="Forever & Always" class="absolute inset-0 w-full h-full object-cover z-10 hover:opacity-90 transition-opacity">
+            </div>
+            <p class="font-dancing text-center mt-3 text-lg" style="color: #8b0a50;">My Fav Pic of Us 💕</p>
+        </div>
+        </div>
+      </div>
+      
+      <div class="letter-paper rounded-lg p-6 md:p-10 max-w-3xl mx-auto">
+        <div class="text-center mb-6"><span class="text-4xl">💌</span></div>
+        <h3 id="letter-title" class="font-dancing text-3xl md:text-4xl text-center mb-8" style="color: #c71585;">Dear Baba... </h3>
+        <div id="letter-content" class="font-playfair text-lg md:text-xl leading-relaxed space-y-6" style="color: #5c3d4a;">
+          <p>Hellu, I made this website because I feel guilty for not giving you the flowers that you deserve. Ito lang naisip kong way to make you feel happy and loved.</p>
+          <p>Thank you for being my baby. Thank you for loving me. And thank you for making every moment we share so special.</p>
+          <p>Belated Happy Valentines Day, my baby. Always remember that I love you every single day.</p>
+          <p>I'm excited for all the memories we're going to make, my baby. I love you so much!</p>
+        </div>
+        <div class="text-right mt-10">
+          <p id="signature" class="font-dancing text-2xl md:text-3xl" style="color: #c71585;">Your most loving BF,<br> Tam 💗</p>
+        </div>
+        <div class="absolute top-4 left-4 text-2xl opacity-30">💕</div>
+        <div class="absolute top-4 right-4 text-2xl opacity-30">💕</div>
+        <div class="absolute bottom-4 left-4 text-2xl opacity-30">💕</div>
+        <div class="absolute bottom-4 right-4 text-2xl opacity-30">💕</div>
+      </div>
+      
+      <div class="text-center mt-12 pb-8">
+        <div class="text-4xl mb-4"><span>🌹</span> <span class="mx-2">💕</span> <span>🌹</span></div>
+        <p class="font-dancing text-2xl" style="color: #c71585;">By: Your poging BF 💖</p>
+        <button id="back-btn" class="mt-6 font-playfair text-lg px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style="background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%); color: white;"> ← Back to Start </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
