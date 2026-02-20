@@ -1,15 +1,15 @@
 const defaultConfig = {
-  main_title: "Happy Valentine's Day!",
-  button_text: "Click for a Surprise 💝",
+  main_title: "For my Ati",
+  button_text: "Open this 💕",
   letter_title: "Dear, Baba",
-  letter_content: `From the moment I met you, my life changed in the most beautiful way. Every day with you feels like a dream I never want to wake up from.
+  letter_content: `Hellu, I made this website because I feel guilty for not giving you the flowers that you deserve. Ito lang naisip kong way to make you feel happy and loved.
 
-You are my sunshine on cloudy days, my comfort in times of worry, and my greatest adventure. Your smile lights up my world, and your love fills my heart with endless joy.
+Thank you for being my baby. Thank you for loving me. And thank you for making every moment we share so special.
 
-Thank you for being you, for loving me, and for making every moment we share so incredibly special. I cherish every laugh, every conversation, and every quiet moment together.
+Belated Happy Valentines Day, my baby. Always remember that I love you every single day.
 
-Here's to us, to our love, and to all the beautiful memories we'll continue to create together. 💕`,
-  signature: "Bf mong pogi,\nTam 💗",
+I'm excited for all the memories we're going to make, my baby. I love you so much!`,
+  signature: "Your most loving BF,\nTam 💗",
   background_color: "#1a0a0a",
   accent_color: "#ff6b9d",
   text_color: "#ffb6c1",
